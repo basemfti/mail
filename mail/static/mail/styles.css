@@ -1,0 +1,225 @@
+textarea {
+    min-height: 400px;
+}
+
+.read{
+    background-color: #d7d7d7;
+}
+.unread{
+    background-color: white;
+}
+/* General Styles */
+/* General Styles */
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url("f.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Textarea Style */
+textarea {
+    min-height: 400px;
+}
+
+/* Email Item Styles */
+.list-group-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.list-group-item:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Read and Unread Email Styles */
+.list-group-item.read {
+    background-color: #eef1f5;
+}
+
+.list-group-item.unread {
+    background-color: #ffffff;
+    border-left: 5px solid #007bff;
+}
+
+/* Email Content Styles */
+.email-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.sender {
+    font-weight: bold;
+    color: #333;
+    width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.subject {
+    color: #555;
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.timestamp {
+    color: #999;
+    text-align: right;
+    width: 20%;
+    font-size: 0.9em;
+}
+
+/* Form Control Styles */
+.form-control {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Views Styling */
+#emails-view, #email-detail-view, #compose-view {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for Email Item Fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.list-group-item {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Button Styles */
+.btn {
+    transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 12px 20px;
+    border-bottom: 2px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+/* Left Section (Logo + Text + Buttons) */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Logo Container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+/* Logo Image */
+.logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+/* Logo Text */
+.logo-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 8px;
+}
+
+/* Right Section (User Email & Logout) */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* User Email */
+.user-email {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Button Hover Effect */
+.btn-sm {
+    padding: 8px 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-sm:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-left, .nav-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        height: 35px;
+    }
+
+    .logo-text {
+        font-size: 16px;
+    }
+}
