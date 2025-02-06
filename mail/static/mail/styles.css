@@ -8,14 +8,12 @@ textarea {
 .unread{
     background-color: white;
 }
-/* General Styles */
-/* General Styles */
-/* General Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
-    background-image: url("f.jpg");
+    background-image: url("t.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
