@@ -1,20 +1,44 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
+  
+  function setActiveButton(activeId) {
+      // Remove 'active' class from all buttons
+      document.querySelectorAll(".navbar .btn").forEach(button => {
+          button.classList.remove("active");
+      });
 
-  // Use buttons to toggle between views
-  document.querySelector('#inbox').addEventListener('click', () => load_mailbox('inbox'));
-  document.querySelector('#sent').addEventListener('click', () => load_mailbox('sent'));
-  document.querySelector('#archived').addEventListener('click', () => load_mailbox('archive'));
-  document.querySelector('#compose').addEventListener('click', compose_email);
+      // Add 'active' class to the clicked button
+      document.getElementById(activeId).classList.add("active");
+  }
 
+  // Use buttons to toggle between views and set active state
+  document.querySelector('#inbox').addEventListener('click', () => {
+      load_mailbox('inbox');
+      setActiveButton('inbox');
+  });
 
-  // Submit
+  document.querySelector('#sent').addEventListener('click', () => {
+      load_mailbox('sent');
+      setActiveButton('sent');
+  });
+
+  document.querySelector('#archived').addEventListener('click', () => {
+      load_mailbox('archive');
+      setActiveButton('archived');
+  });
+
+  document.querySelector('#compose').addEventListener('click', () => {
+      compose_email();
+      setActiveButton('compose');
+  });
   document.querySelector('#compose-form').addEventListener('submit', send_email);
 
-  // By default, load the inbox
+  // By default, load the inbox and highlight Inbox button
   load_mailbox('inbox');
+  setActiveButton('inbox');
 });
+
 
 function compose_email() {
 
